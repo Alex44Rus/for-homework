@@ -14,14 +14,17 @@
 
 <body>
     <div class="top">
-        <div class="header center">
+        <header class="header center">
             <div class="header-logo-and-find">
-                <img class="logo" src="img/logo.svg" alt="logo">
+                <a href="index.html"><img class="logo" src="img/logo.svg" alt="logo"></a>
                 <a href="#" class="header-link"> <img src="img/find-icon.svg" alt="find-icon"></a>
             </div>
 
             <div class="header-menu">
-                <a class="menu-burger" href="#" class="header-link"><img src="img/button-burger.svg" alt="menu"></a>
+
+                <a href="#" class="header-link"><img src="img/button-burger.svg" alt="menu"></a>
+
+
                 <div class="menu-burger-hover">
                     <h2 class="menu-heading">MENU</h2>
                     <a href="#" class="menu-link-pink">MAN</a>
@@ -46,14 +49,12 @@
 
 
                 </div>
-                <a class="menu-personal" href="#" class="header-link hidden"><img src="img/button-profile.svg"
-                        alt="profile"></a>
-                <a class="menu-basket" href="#" class="header-link hidden"><img src="img/button-basket.svg"
-                        alt="basket"></a>
+                <a href="#" class="header-link hidden"><img src="img/button-profile.svg" alt="profile"></a>
+                <a href="#" class="header-link hidden"><img src="img/button-basket.svg" alt="basket"></a>
                 <img class="header-menu-count-backgr hidden" src="img/counter-background.svg" alt="">
                 <p class="counter-text hidden">5</p>
             </div>
-        </div>
+        </header>
         <div class="top-content center">
             <div class="top-content-img">
                 <img class="main-img hidden" src="img/main-pic.svg" alt="main-pic">
@@ -103,7 +104,7 @@
             </div>
 
         </div>
-        <div class="item item-big"><img class="item-img-big" src="img/accesories.svg" alt="ACCESORIES"></a>
+        <div class="item item-big"><a href="#"><img class="item-img-big" src="img/accesories.svg" alt="ACCESORIES"></a>
             <div class="item-text-for-center">
                 <p class="item-big-text">LUXIROUS & TRENDY
                 </p><br>
@@ -306,7 +307,7 @@
     </div>
 
     <footer class="footer">
-        <article class="footer-top center">
+        <div class="footer-top center">
             <div class="advantage">
                 <svg class="footer-adv-img" xmlns="http://www.w3.org/2000/svg" width="46" height="32"
                     viewBox="0 0 46 32" fill="none">
@@ -344,10 +345,10 @@
                     with extensive models.</p>
 
             </div>
-        </article>
+        </div>
         <article class="subscribe">
 
-            <img class="subscibe-background" src="img/subscribe-background.svg" alt="bckgrnd">
+            <!--<img class="subscibe-background" src="img/subscribe-background.svg" alt="bckgrnd"> pic in css-->
             <div class="subscribe-item">
                 <svg class="subscibe-photo" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96" fill="none">
@@ -373,12 +374,15 @@
                 <div class="subscribe-button-div">
                     <div class="subscribe-prebutton-input">
                         <form action="#">
-                            <input class="email-input-bckgrnd" placeholder="Enter Your Email" type="email" name=""
-                                id="">
+                            <input type="email" class="email-input-bckgrnd" placeholder="Enter Your Email"
+                                name="email-placehold" id="emplhld">
+
                         </form>
                     </div>
                     <div class="subscribe-button-input">
-                        <form action="#"><button class="subscribe-button" type="submit">Subscribe</button></form>
+                        <form action="#">
+                            <button class="subscribe-button" type="submit">Subscribe</button>
+                        </form>
                     </div>
                 </div>
 
@@ -386,11 +390,11 @@
 
         </article>
 
-        <article class="footer-bottom center">
+        <div class="footer-bottom center">
             <p class="footer-bottom-text">© 2022 Brand All Rights Reserved.</p>
             <div class="socials">
                 <div class="socials-net">
-                    <a href="#">
+                    <a href="https://en.wikipedia.org/wiki/Facebook">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="icon-back" d="M31.4506 0H0V32H31.4506V0Z" fill="white" />
                             <path class="social-net-icon"
@@ -403,7 +407,7 @@
                 </div>
 
                 <div class="socials-net">
-                    <a href="#">
+                    <a href="https://en.wikipedia.org/wiki/Instagram">
                         <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="icon-back" d="M32.1883 0H0.737671V32H32.1883V0Z" fill="white" />
                             <g clip-path="url(#clip0_190_1608)">
@@ -423,7 +427,7 @@
                 </div>
 
                 <div class="socials-net">
-                    <a href="#">
+                    <a href="https://ru.pinterest.com/">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="icon-back" d="M31.9259 0H0.475342V32H31.9259V0Z" fill="white" />
                             <g clip-path="url(#clip0_190_1616)">
@@ -443,7 +447,7 @@
                 </div>
 
                 <div class="socials-net">
-                    <a href="#">
+                    <a href="https://en.wikipedia.org/wiki/Twitter">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="icon-back" d="M31.6636 0H0.213013V32H31.6636V0Z" fill="white" />
                             <g clip-path="url(#clip0_190_1612)">
@@ -465,7 +469,7 @@
 
 
             </div>
-        </article>
+        </div>
     </footer>
 
 </body>

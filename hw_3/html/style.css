@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 a {
@@ -11,21 +12,25 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
 .header {
-    /* width: 100vw; */
-    height: 75px;
+
     max-width: 1600px;
+    height: 75px;
     flex-shrink: 0;
     background-color: #222;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+
 }
 
 .center {
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
+
 }
 
 .header-logo-and-find {
@@ -41,26 +46,27 @@ body {
 }
 
 .header-menu {
-    position: relative;
+
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 33px;
+
 }
 
 .menu-burger-hover {
-    display: flex;
+    padding-bottom: 32px;
     display: none;
     position: absolute;
-    top: auto;
-    right: 83px;
+    top: 21px;
+    right: 0;
     flex-direction: column;
-    margin-top: 656px;
+    margin-top: 54px;
     width: 232px;
     background: #FFF;
-    justify-content: end;
 
+    z-index: 5;
 }
 
 .menu-link-pink {
@@ -98,12 +104,12 @@ body {
     line-height: normal;
 }
 
-.menu-burger:hover .menu-burger-hover {
-    display: contents;
-
+.header-menu:hover .menu-burger-hover {
+    display: flex;
 }
 
 .header-link {
+
     background-color: #222;
 }
 
@@ -130,6 +136,7 @@ body {
 
 
 .top-content {
+
     max-width: 100vw;
     display: flex;
     height: 764px;
@@ -148,6 +155,9 @@ body {
     justify-items: left;
 }
 
+.main-img {
+    margin-left: -115px;
+}
 
 
 .top-content-img-and-text {
@@ -304,10 +314,12 @@ body {
     left: 0;
     top: 0;
     display: none;
+    transition: all 0.5s ease-out;
 }
 
 .product-card:hover .item-add-hover {
     display: block;
+    transition: all 0.5s ease;
 }
 
 
@@ -436,15 +448,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url(img/subscribe-background.svg);
+    background-size: cover;
 }
 
-.subscibe-background {
-
-    position: absolute;
-    z-index: -999;
-    height: 100%;
-
-}
 
 .subscribe-item {
     text-align: center;
@@ -599,6 +606,10 @@ body {
 
     .header-menu {
         margin-right: 40px;
+    }
+
+    .header-menu:active .menu-burger-hover {
+        display: flex;
     }
 
     .header {
@@ -902,18 +913,22 @@ body {
 
 .socials-net:hover .icon-back {
     fill: #F16D7F;
+    transition: all 0.5s ease;
 }
 
 .socials-net:hover .social-net-icon {
     fill: white;
+    transition: all 0.5s ease;
 }
 
 .products-bottom-button:hover {
     background: #F16D7F;
+    transition: all 0.5s ease;
 }
 
 
 .products-bottom-button:hover .products-bottom-button-text {
     color: white;
     background-color: #F16D7F;
+    transition: all 0.5s ease;
 }
