@@ -1,6 +1,16 @@
 $colorTextPink: #f16d7f;
 $widthSite: 1140px;
 $svgFillGrey: #a4a4a4;
+$colorBackGround: #fff;
+
+@mixin text-pink ($fs) {
+    font-family: Lato;
+    font-size: $fs;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f16d7f;
+}
 
 
 
@@ -29,19 +39,43 @@ a {
 }
 
 
-
-
 .center {
     padding-left: calc(50% - ($widthSite / 2));
     padding-right: calc(50% - ($widthSite / 2));
 
 }
 
+
+
 .header {
     display: flex;
     justify-content: space-between;
     padding-top: 25px;
 
+    &__logo__text {
+        margin-right: 25px;
+        font-family: Lato;
+        font-size: 27px;
+        line-height: 32px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: #222222;
+
+        &__pink__bold {
+            font-weight: 900;
+            color: $colorTextPink;
+        }
+    }
+
+    &__text {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 300;
+        letter-spacing: 0.025em;
+        color: #222222;
+    }
 
     &__left__div {
         display: flex;
@@ -82,7 +116,8 @@ a {
         position: absolute;
         top: 37px;
         width: 262px;
-        background-color: #ffffff;
+        background-color: $colorBackGround;
+        ;
         border-radius: 5px;
 
         &__categories {
@@ -104,6 +139,12 @@ a {
                 text-transform: uppercase;
                 letter-spacing: 0.025em;
                 color: #232323;
+                border-bottom: 1px solid #e8e8e8;
+                display: block;
+
+                &:hover {
+                    color: $colorTextPink
+                }
             }
         }
 
@@ -133,7 +174,7 @@ a {
             padding-left: 16px;
             width: 317px;
             height: 38px;
-            background-color: #ffffff;
+            background-color: $colorBackGround;
             border: 1px solid #e6e6e6;
             font-size: 14px;
             line-height: 32px;
@@ -146,7 +187,7 @@ a {
             margin-left: -1px;
             padding: 11px 12px;
             height: 38px;
-            background-color: #ffffff;
+            background-color: $colorBackGround;
             border: 1px solid #e6e6e6;
             border-radius: 0px 3px 3px 0px;
         }
@@ -162,181 +203,168 @@ a {
         position: relative;
 
         &__cart {
-            &__drop {
-                position: absolute;
-                top: 90px;
-                left: 4px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-items: center;
-                background-color: #ffffff;
-                border-radius: 5px;
-
-                &__product {
-                    padding-bottom: 16px;
-                    margin-top: 16px;
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    align-items: center;
-                    justify-items: center;
-
-
-                    &__item {
-                        margin-right: 8px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 10px;
-                    }
-
-
-                }
-
-                &__total {
-                    margin-top: 19px;
-                    margin-bottom: 32px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    &__price {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-
-                    }
-                }
-
-            }
+            width: 32px;
+            height: 29px;
         }
-
-
-
-        &__checkout {
-            margin-bottom: 11px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 225px;
-            height: 50px;
-            border: 1px solid #f16d7f;
-            font-size: 14px;
-            line-height: 1.2;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #f16d7f;
-        }
-
-        &__go__to__cart {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 225px;
-            height: 50px;
-            background-color: #ffffff;
-            border: 1px solid #eaeaea;
-            font-size: 14px;
-            line-height: 1.2;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #4a4a4a;
-
-        }
-
 
         &__button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            width: 130px;
-            height: 38px;
-            background-color: #f16d7f;
+            &__summary {
+
+                background-color: $colorTextPink;
+                text-align: center;
+                width: 130px;
+                height: 38px;
+                box-sizing: border-box;
+
+                border: 1px solid $colorTextPink;
+
+                &__cont {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                }
+
+                &:hover {
+                    background-color: $colorBackGround;
+                    border: 1px solid $colorTextPink;
+                    transition: .3s;
+                }
+
+                &:hover .header__right__div__button__text {
+                    color: $colorTextPink;
+                }
+
+                &:hover .header__right__div__button__caret {
+                    fill: $colorTextPink;
+                }
+
+
+            }
 
             &__text {
+                margin-left: 18px;
                 font-size: 15px;
                 line-height: 32px;
                 font-weight: 400;
                 letter-spacing: 0.025em;
-                color: #ffffff;
+                color: $colorBackGround;
+            }
+
+            &__caret {
+                fill: $colorBackGround;
             }
         }
     }
 
-
-    #cart {
+    &__right__cart {
+        display: flex;
+        padding-bottom: 9px;
+        flex-direction: column;
+        justify-items: center;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #ffffff;
         position: absolute;
-        left: -99999px;
-    }
+        right: 14px;
+        left: auto;
+        top: 55px;
 
-    #cart:checked~.header__right__div__cart__drop {
-        display: none;
-    }
-
-    .logo__text {
-        font-size: 27px;
-        line-height: 32px;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 0.025em;
-        color: #222222;
-
-        &__pink__bold {
-            font-weight: 900;
-            color: $colorTextPink;
+        &__item {
+            margin-top: 21px;
+            padding-bottom: 16px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid rgba(237, 237, 237, 0.74);
         }
-    }
 
-    .text {
-        font-size: 14px;
-        line-height: 32px;
-        font-weight: 300;
-        letter-spacing: 0.025em;
-        color: #222222;
+        &__item-info {
+            display: block;
+        }
 
-        &__product__mini {
+        &__title {
+            font-family: Lato;
             font-size: 12px;
             line-height: 1.2;
             font-weight: 700;
             text-transform: uppercase;
             color: #222222;
+        }
 
-            &__price {
-                font-size: 12px;
-                line-height: 1.2;
-                font-weight: 400;
-                text-transform: uppercase;
-                color: #f16d7f;
+        &__text {
+            @include text-pink(12px)
+        }
 
-                &__X {
-                    font-size: 10px;
-                }
+        &__text-x {
+            @include text-pink(10px)
+        }
+
+        &__fa-circle {
+            fill: #c0c0c0;
+        }
+
+        &__total {
+            margin-top: 20px;
+            margin-bottom: 32px;
+            display: flex;
+            align-content: center;
+            justify-content: space-around;
+        }
+
+        &__total-heading {
+            font-family: Lato;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #222222;
+        }
+
+        &__total-price {
+            font-family: Lato;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #222222;
+        }
+
+        &__button-link {
+            display: block;
+            margin-left: 18px;
+            margin-bottom: 11px;
+            width: 225px;
+            height: 50px;
+            border: 1px solid #eaeaea;
+            text-align: center;
+
+            &:hover {
+                border: 1px solid $colorTextPink;
+                transition: .3s;
+            }
+
+            &:hover .header__right__cart__button-text {
+                color: $colorTextPink;
+                transition: .3s;
             }
         }
-    }
 
-    .svg__caret__down {
-        fill: $svgFillGrey;
-
-        &__white {
-            fill: #ffffff;
+        &__button-text {
+            margin-top: 18px;
+            font-family: Lato;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #4a4a4a;
         }
+
+
     }
 
-    .line__separator {
-        border-bottom: 1px solid #e8e8e8;
-        width: 236px;
 
-        &__right__drop {
-            width: 229px;
-            height: 1px;
-            background-color: rgba(237, 237, 237, 0.74);
-        }
-    }
-
-    .svg__search__path {
-        fill: $svgFillGrey
-    }
 }
