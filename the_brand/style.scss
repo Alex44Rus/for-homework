@@ -1554,3 +1554,43 @@ a {
     }
 
 }
+
+.offer-right-prod {
+    display: flex;
+    gap: 80px;
+    background-color: #222224;
+
+    &__compet {
+        text-align: center;
+
+
+        &_logo {
+            margin: 89px 30px 32px 36px;
+            width: 15%;
+            height: 10%;
+        }
+
+        &_title {
+            margin-bottom: 17px;
+            font-family: Lato;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            color: #fbfbfb;
+        }
+
+        &_text {
+            margin-bottom: 114px;
+            width: 312px;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #fbfbfb;
+        }
+
+    }
+
+
+}
